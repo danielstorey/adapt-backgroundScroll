@@ -1,0 +1,27 @@
+<div class="background-scroll-inner component-inner" role="region" aria-label="{{_globals._components._text.ariaRegion}}">
+    {{> component this}}
+
+    <div class="bg-scroll">
+        <div class="bg-scroll-images">
+            {{#each _items}}
+            <div class="bg-scroll-background" style="background-image: url('{{image}}');"></div>
+            {{/each}}
+        </div>
+        <div class="bg-scroll-items">
+            {{#each _items}}
+            <div class="bg-scroll-item">
+                <div class="bg-scroll-item-inner clearfix">
+                    {{#if title}}
+                    <div class="bg-scroll-title component-title">{{title}}</div>
+                    {{/if}}
+                    {{#if body}}
+                    <div class="bg-scroll-body">{{body}}</div>
+                    {{/if}}
+                    <div class="bg-scroll-buttons"></div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</div>
