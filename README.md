@@ -1,7 +1,6 @@
 # adapt-backgroundScroll
 
 **Background Scroll** is a *presentation component* Created by Dan storey.
-<img align="right" src="" alt="Image coming soon">
 
 The Background Scroll component displays items of text over fullscreen images. As the learner scrolls to each new text item the background image gradually changes. The opacity of the images is linked to the learner's scroll position, making the transitions feel completely connected to the learner's interaction.
  
@@ -9,7 +8,7 @@ The Background Scroll component displays items of text over fullscreen images. A
 
 ##Installation
 
-Simply copy this folder into src/components/ and run the `grunt build` command.
+Run the following from the command line: `adapt install adapt-backgroundScroll`
 
 ## Settings Overview
 
