@@ -1,6 +1,6 @@
 {
 	"name": "adapt-backgroundScroll",
-	"description": "A component with gradually changing backgrounds as the user scrolls",
+	"description": "Background changes as the user scrolls. A timer prevents completion when instantly scrolling to bottom. Demo available.",
 	"version": "1.0",
 	"framework": "^2.0.0",
 	"displayName": "Background Scroll",
