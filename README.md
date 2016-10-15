@@ -3,7 +3,9 @@
 **Background Scroll** is a *presentation component* Created by Dan storey.
 <img align="right" src="" alt="Image coming soon">
 
-The Background Scroll component displays items of text over fullscreen images. As the learner scrolls to each new text item the background image gradually changes. The opacity of the images is linked to the learner's scroll position, making the transitions feel completely connected to the learner's interaction. 
+The Background Scroll component displays items of text over fullscreen images. As the learner scrolls to each new text item the background image gradually changes. The opacity of the images is linked to the learner's scroll position, making the transitions feel completely connected to the learner's interaction.
+ 
+[**Click here for an interactive demo**](https://danielstorey.github.io/adapt-demo-course/#/id/co-main)
 
 ##Installation
 
