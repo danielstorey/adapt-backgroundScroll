@@ -41,12 +41,22 @@ define(function(require) {
 				var st = window.pageYOffset || document.documentElement.scrollTop;
 				var top = this.$el.offset().top;
 				var iStart = this.model.get("_fadeFirstImage") ? 0 : 1;
+				var distanceFromBottom = st - (this.$el.height() + top - (this.viewHeight / 2));
+				var distanceFromTop = st - (top - this.viewHeight);
 				var opacity;
+				var imgTop = 100;
 
-				if (st > top - this.viewHeight && st < top) {
-					var imgTop = 100 - (((st - (top - this.viewHeight)) / this.viewHeight) * 100);
-					this.$(".bg-scroll-images").css({top: imgTop + "%"});
+				// Scroll the first image into view
+				if (distanceFromTop > 0 && distanceFromTop < this.viewHeight) {
+					imgTop = 100 - ((st - (top - this.viewHeight)) / this.viewHeight) * 100;
+				} else if (distanceFromBottom > 0) {
+					// Scroll last image when user reaches the bottom of the component
+					imgTop = - (distanceFromBottom / this.viewHeight) * 100;
+				} else if (distanceFromTop > this.viewHeight) {
+					imgTop = 0;
 				}
+
+				this.$(".bg-scroll-images").css({top: imgTop + "%"});
 
 				if (iStart === 1) {
 					opacity = st + this.viewHeight >= top - 60 ? 1 : 0;
@@ -74,9 +84,8 @@ define(function(require) {
 		},
 
 		setupHeights: function() {
-			var $item = this.$items.eq(0);
-			//this.el.style.paddingTop = this.viewHeight - $item.offset().top - $item.outerHeight() - 50 + "px";
-			_.each(this.$items, function(el, i) {
+			this.el.style.paddingBottom = this.viewHeight / 2 + "px";
+			_.each(this.$items, function(el) {
 				var $el = $(el);
 				var padding = (this.viewHeight - $el.height()) / 2 + "px 0";
 				$el.css({padding: padding});

@@ -3,7 +3,7 @@
     "repository": "git://github.com/danielstorey/adapt-backgroundScroll.git",
     "framework": "^2.0.0",
     "description": "Background changes as the user scrolls. A timer prevents completion when instantly scrolling to bottom. Demo available.",
-    "version": "1.0",
+    "version": "1.0.1",
     "displayName": "Background Scroll",
     "component": "backgroundScroll",
     "main": "/js/adapt-backgroundScroll.js",
