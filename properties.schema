@@ -1,0 +1,72 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties":{
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text"
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": false,
+            "inputType": "Text",
+            "title": "Item Title",
+            "default": "",
+            "validators": [],
+            "help": "This is the optional item title",
+            "translatable": true
+          },
+          "body": {
+            "type": "string",
+            "required": false,
+            "inputType": "TextArea",
+            "title": "Item Body",
+            "default": "",
+            "validators": [],
+            "help": "This is the optional item body text",
+            "translatable": true
+          },
+          "image": {
+            "type":"string",
+            "required":true,
+            "default": "",
+            "inputType": "Asset:image",
+            "validators": ["required"],
+            "help": "This is the image that you would like to display in the background. Make sure you use a high definition good quality image file"
+          }
+        }
+      }
+    }
+  }
+}
