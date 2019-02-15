@@ -1,18 +1,18 @@
-.bg-scroll-images {
-	z-index: 1;
+.bgscroll-images {
+	z-index: -1;
 	position: fixed;
-	top: 100%;
+	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 }
 
-.bg-scroll-items {
+.bgscroll-items {
 	position: relative;
 	z-index: 2;
 }
 
-.bg-scroll-background {
+.bgscroll-background {
 	opacity: 0;
 	position: absolute;
 	height: 100%;
@@ -21,17 +21,17 @@
 	background-size: cover;
 }
 
-.bg-scroll-body {
+.bgscroll-body {
 	background: @primary-color;
 	color: #ffffff;
 	padding: 20px;
 	line-height: 1.6;
 }
 
-.bg-scroll-title {
+.bgscroll-title {
 }
 
-.bg-scroll-buttons {
+.bgscroll-buttons {
 	float: right;
 
 	button {
@@ -44,4 +44,9 @@
 			bottom: 2px;
 		}
 	}
+}
+
+.page.bgscroll {
+	padding-top: 0;
+	margin-top: 0;
 }
