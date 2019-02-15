@@ -1,0 +1,103 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://jsonschema.net",
+    "$ref": "http://localhost/plugins/content/component/model.schema",
+    "properties": {
+        "pluginLocations": {
+            "type": "object",
+            "properties": {
+                "config": {
+                    "type": "object",
+                    "properties": {}
+                },
+                "course": {
+                    "type": "object",
+                    "properties": {}
+                },
+                "contentobject": {
+                    "type": "object",
+                    "properties": {
+                        "_bgScroll": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "Background Scroll",
+                            "properties": {
+                                "_isEnabled": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "title": "Enable Trickle",
+                                    "inputType": "Checkbox",
+                                    "validators": []
+                                },
+                                "_children": {
+                                    "type": "string",
+                                    "required": false,
+                                    "enum": [
+                                        "articles",
+                                        "blocks"
+                                    ],
+                                    "default": "blocks",
+                                    "title": "Children",
+                                    "inputType": {
+                                        "type": "Select",
+                                        "options": [
+                                            "articles",
+                                            "blocks"
+                                        ]
+                                    },
+                                    "validators": [
+                                        "required"
+                                    ],
+                                    "help": "Select whether you wish to place background images on Articles or Blocks"
+                                }
+                            }
+                        }
+                    }
+                },
+                "article": {
+                    "type": "object",
+                    "properties": {
+                        "_bgScroll": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "Background Scroll",
+                            "properties": {
+                                "src": {
+                                    "type": "string",
+                                    "required": false,
+                                    "title": "Background Image",
+                                    "inputType": "Asset:image",
+                                    "validators": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "block": {
+                    "type": "object",
+                    "properties": {
+                        "_bgScroll": {
+                            "type": "object",
+                            "required": false,
+                            "legend": "Background Scroll",
+                            "properties": {
+                                "src": {
+                                    "type": "string",
+                                    "required": false,
+                                    "title": "Background Image",
+                                    "inputType": "Asset:image",
+                                    "validators": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "component": {
+                    "type": "object",
+                    "properties": {}
+                }
+            }
+        }
+    }
+}
