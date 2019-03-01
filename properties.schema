@@ -25,7 +25,7 @@
                                 "_isEnabled": {
                                     "type": "boolean",
                                     "required": false,
-                                    "title": "Enable Trickle",
+                                    "title": "Enable on page",
                                     "inputType": "Checkbox",
                                     "validators": []
                                 },
