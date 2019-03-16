@@ -31,6 +31,6 @@ articles.json / blocks.json
 No known limitations
 
 ----------------------------
-**Version number:**  3.0.0
+**Version number:**  3.0.2
 **Framework versions:**  >=3.0.0
 **Author / maintainer:** Dan Storey

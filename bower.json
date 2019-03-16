@@ -6,7 +6,7 @@
     },
     "framework": ">=3.0.0",
     "description": "Backgrounds fade as the user scrolls. Backgrounds can be configured at article and block level",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "displayName": "Background Scroll",
     "extension": "backgroundScroll",
     "main": "/js/adapt-backgroundScroll.js",
